@@ -10,12 +10,14 @@ const Team = ({ refresh }) => {
   const [setisAddUserVisible, setIsAddUserVisible] = useState(null);
   const token = localStorage.getItem('authToken');
   const options = ['admin', 'moderator', 'editor'];
-  const [selectedOptions, setSelectedOptions] = useState({}); // Track selected roles for each user
-
+  const [selectedOptions, setSelectedOptions] = useState({}); 
+ 
   useEffect(() => {
+ 
+
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('https://goldbazar.shop/backend1/api/users', {
+        const response = await axios.get(process.env.REACT_APP_API_URL, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

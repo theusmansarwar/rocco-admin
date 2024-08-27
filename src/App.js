@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import './App.css';
-import Posts from './Components/Posts';
-import Team from './Components/Team';
-import AddPost from './Components/AddPost';
-import Menulist from './Components/Menulist';
-import Home from './Components/Home';
+import Posts from './Components/Post/Posts';
+import Team from './Components/Teams/Team';
+import AddPost from './Components/Post/AddPost';
+import Menulist from './Components/Categories/Menulist';
+import Home from './Components/Dashboard/Home';
 import { PiCaretCircleDoubleLeftFill } from "react-icons/pi";
 import { MdOutlineDashboard } from "react-icons/md";
 import { IoCreateOutline } from "react-icons/io5";
 import { FaRegListAlt } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
 import { RiTeamLine } from "react-icons/ri";
-import AddlistItem from './Components/AddlistItem';
+import AddlistItem from './Components/Categories/AddlistItem';
 
 function App() {
   const navigate = useNavigate();
