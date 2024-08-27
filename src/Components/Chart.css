@@ -1,0 +1,15 @@
+.chart-area{
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.139);
+    margin-top: 20px;
+    border-radius: 20px;
+    height: 40vh;
+}
+@media screen and (max-width: 1080px) {
+    .chart-area{
+     padding: 2px;
+        height: 30vh;
+        font-size: 10px;
+    }
+
+}

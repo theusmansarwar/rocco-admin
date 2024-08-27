@@ -1,0 +1,40 @@
+.add-list-item{
+    
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+
+}
+.input{
+    width: 96%;
+    margin-top: 20px;
+}
+.addlist{
+justify-content: center;
+align-items: center;
+margin-top: 100px;
+display: flex;
+}
+.add-button{
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 16px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.cancel-button{
+    background-color: rgb(141, 141, 141);
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 16px;
+    width: 100%;
+ 
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

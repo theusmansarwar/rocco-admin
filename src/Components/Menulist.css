@@ -1,0 +1,31 @@
+.menu-list-item{
+    display: flex;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 8px;
+}
+.menu-list-item-edit{
+    width: 20%;
+    text-align: right;
+
+}
+.menu-list-item-mid{
+    width: 80%;
+    
+}
+@media screen and (max-width: 1080px) {
+
+    .menu-list-item-edit{
+        width: 40%;
+        text-align: right;
+    
+    }
+    .menu-list-item-mid{
+        width: 60%;
+        
+    }
+
+
+}

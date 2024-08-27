@@ -1,0 +1,115 @@
+.joditEditor {
+    height: auto;
+}
+
+.AddPost {
+
+    padding: 20px;
+   height: auto;
+}
+
+input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+select {
+    width: 101.25%;
+    padding: 6px;
+    margin-bottom: 10px;
+}
+
+select option {
+    height: 50px;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    width: 480px;
+    height: 240px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.image-container img {
+    width: 480px;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    border: 1px solid black;
+    background-color: aliceblue;
+}
+
+.remove-icon {
+    position: absolute;
+    top: -20px;
+    right: -15px;
+    z-index: 2;
+    color: red;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.published {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 12px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ 
+
+}
+.button-section{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+@media screen and (max-width: 1080px) {
+
+    .AddPost {
+
+        padding: 0px;
+       height: auto;
+    }
+    .image-container {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    
+    }
+    
+    .image-container img {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        align-items: center;
+        border: 1px solid black;
+        background-color: aliceblue;
+    }
+
+
+
+}

@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .content-section {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  .content-section .left {
+    width: 20%;
+    transition: width 0.3s ease;
+    border-right: 2px solid rgba(196, 196, 196, 0.619);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .content-section .left .logo {
+    width: 70%;
+    margin: 20px auto; /* Centering the logo */
+    border-radius: 50%;
+    border:  4px solid rgb(26, 72, 255);;
+  }
+  
+  .content-section .left ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+  }
+  
+  .content-section .left ul li {
+    color: black;
+    padding: 5px;
+    list-style: none;
+    display: flex;
+    align-items: center; /* Aligns items vertically centered */
+    margin: 20px;
+    gap: 10px;
+  }
+  
+  .content-section .left ul li:hover {
+    background-color: rgba(0, 0, 0, 0.148);
+  }
+  
+  .content-section .left.collapsed ul li:hover {
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0); /* Added hover effect for collapsed state */
+  }
+  
+  .content-section .left.collapsed ul li {
+    margin-top: 30px;
+    margin-left: 15px;
+    margin-right: 0%;
+  }
+  
+  .content-section .left.collapsed {
+    width: 5%;
+  }
+  
+  .content-section .left.collapsed ul li p {
+    display: none; /* Hides text when collapsed */
+  }
+  
+  .content-section .right {
+    width: 80%;
+    padding: 20px;
+    padding-top: 30px;
+    height: 92vh;
+    overflow-y: scroll;
+  }
+  
+  .content-section .right.expanded {
+    width: 95%;
+  }
+  
+  .close-logo {
+    color: rgb(26, 72, 255);
+    font-size: 40px;
+    top: 60px;
+    left: -20px;
+    position: relative;
+    transition: transform 0.6s ease;
+  }
+  .close-logo.rotated {
+    transform: rotate(180deg);
+  }
+  
+  .content-section .left .list-icons {
+    font-size: 20px; 
+  }
+  
+  .content-section .left.collapsed .list-icons {
+    font-size: 25px;
+   
+  }
+  .content-section .left.collapsed ul li .list-icons:hover {
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.201); 
+  }
+  @media screen and (max-width: 1080px) {
+    .content-section .left {
+       
+        margin: 0%;
+        padding: 0%;
+      }
+      .content-section .close-logo {
+        display: none;
+      }
+      .content-section .left ul li p {
+        display: none; /* Hides text when collapsed */
+      }
+  }
+  
+  
+  
