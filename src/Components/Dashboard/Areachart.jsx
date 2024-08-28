@@ -54,7 +54,7 @@ const Areachart = () => {
         margin={{
           top: 20,
           right: 30,
-          left: 20,
+          left: 10,
           bottom: 5,
         }}
       >
@@ -62,7 +62,7 @@ const Areachart = () => {
         <XAxis dataKey="day" label={{ value: 'Day of the Month', position: 'insideBottomRight', offset: -5 }} />
         <YAxis label={{ value: 'Number of Visitors', angle: -90, position: 'insideLeft' }} />
         <Tooltip />
-        <Area type="monotone" dataKey="visitors" stroke="#8884d8" fill="#8884d8" />
+        <Area type="monotone" dataKey="visitors" stroke="#4FD1C5" fill="#4FD1C5" />
       </AreaChart>
     </ResponsiveContainer>
     </div>

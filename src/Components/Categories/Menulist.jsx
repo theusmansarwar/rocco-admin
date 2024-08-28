@@ -8,6 +8,7 @@ import AddlistItem from './AddlistItem';
 const Menulist = () => {
   const [isAddPostVisible, setIsAddPostVisible] = useState(false);
   const [editData, setEditData] = useState(null);
+  const dummyimg = '../dummy.png';
   const [options, setOptions] = useState([
     { id: 1, category: 'Tech' },
     { id: 2, category: 'Entertainment' },
@@ -78,6 +79,7 @@ const Menulist = () => {
             {options.map((option) => (
               <div key={option.id} className='menu-list-item'>
                 <div className='menu-list-item-mid'>
+                  <img src={dummyimg}/>
                   <h4>{option.category}</h4>
                 </div>
                 <div className='menu-list-item-edit'>

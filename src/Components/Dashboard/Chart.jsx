@@ -53,16 +53,16 @@ const VisitorsChart = () => {
         margin={{
           top: 20,
           right: 30,
-          left: 20,
+          left: 10,
           bottom: 5,
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="day" label={{ value: 'Days', position: 'insideBottomRight', offset: -5 }} />
-        <YAxis label={{ value: 'No of Visitors', angle: -90, position: 'insideLeft' }} />
-        <Tooltip />
-        <Legend />
-        <Line type="monotone" dataKey="visitors" stroke="#8884d8" />
+        <YAxis label={{ value: 'No of Visitors', angle: -90, position: 'insideLeft' }}  />
+        <Tooltip  />
+        <Legend  />
+        <Line type="monotone" dataKey="visitors" stroke="#31e0ac"  />
       </LineChart>
     </ResponsiveContainer>
     </div>

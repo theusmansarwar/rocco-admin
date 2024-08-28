@@ -1,30 +1,41 @@
 .add-list-item{
     
-    width: 400px;
+    width: 350px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     padding: 20px;
 
 }
-.input{
+.add-list-item h3{
+    font-size: 18px;
+
+}
+.add-list-item input{
     width: 96%;
     margin-top: 20px;
+    padding: 5px;
+}
+.add-list-item select{
+    width: 100%;
+    margin-top: 20px;
+    padding: 5px;
 }
 .addlist{
 justify-content: center;
 align-items: center;
-margin-top: 100px;
+margin-top: 80px;
 display: flex;
 }
 .add-button{
-    background-color: rgb(26, 72, 255);
+    background-color: rgb(0, 0, 0);
     border: none;
     color: white;
     padding: 10px;
     border-radius: 16px;
     width: 100%;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    font-size: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .cancel-button{
@@ -34,6 +45,54 @@ display: flex;
     padding: 10px;
     border-radius: 16px;
     width: 100%;
-    margin-bottom: 20px;
+    font-size: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.image-container2 {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.image-container2 img {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    border: 1px solid black;
+    background-color: aliceblue;
+}
+.image-container2 .remove-icon 
+    {
+    position: absolute;
+    top: -15px;
+    right: 88px ;
+    z-index: 2;
+    color: red;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1080px) {
+.image-container2 .remove-icon 
+    {
+    position: absolute;
+    top: -15px;
+    right: 6px ;
+    z-index: 2;
+    color: red;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
 }

@@ -1,10 +1,12 @@
 import React, { useState,useEffect, useRef, useMemo } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation,useNavigate } from 'react-router-dom';
 import JoditEditor from 'jodit-react';
 import './Addpost.css';
 import { IoMdCloseCircle } from "react-icons/io";
 
-const AddPost = ({ placeholder }) => {
+const AddPost = ({ placeholder, handleHideAddPost }) => {
+  
+  const navigate = useNavigate();
   const location = useLocation();
   const post = location.state?.post;
   const dummyimg = '../dummy.png';
@@ -79,6 +81,9 @@ const AddPost = ({ placeholder }) => {
       setShowDeleteIcon(true);
     }
   }, [post]);
+  const handlecancel =()=>{
+    navigate('/posts')
+  }
 
   return (
     <div className='AddPost'>
@@ -94,7 +99,7 @@ const AddPost = ({ placeholder }) => {
             </option>
           ))}
         </select>
-        <h5>Select Thumbnail Image</h5>
+        <p>Select Thumbnail Image</p>
         <div className='image-container'>
           <label htmlFor="file-upload" style={{ cursor: 'pointer' }}>
             <img
@@ -129,7 +134,10 @@ const AddPost = ({ placeholder }) => {
         onBlur={(newContent) => setContent(newContent)} 
         onChange={(newContent) => {}}
       />
-      <div className='button-section'> <button className='published'>Publish</button></div>
+       
+      <div className='button-sections'> 
+      <button className='cancelbtn' onClick={handlecancel}>Cancel</button>
+        <button className='published'>Publish</button></div>
       
     </div>
   );

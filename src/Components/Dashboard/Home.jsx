@@ -5,66 +5,84 @@ import { IoIosEye } from "react-icons/io";
 import { FaUsers } from "react-icons/fa";
 import Chart from './Chart';
 import Areachart from './Areachart'
+
+import { DateRangePicker } from 'rsuite';
+import 'rsuite/dist/rsuite.min.css';
 const Home = () => {
+  const [startDate, setStartDate] = React.useState(null);
+  const [endDate, setEndDate] = React.useState(null);
+
 
   return (
     <div className='content-sections'>
-      <h2>Hi, Welcome Back</h2>
+      <div className='top-headinf-dashboard'><h2>Hi, Welcome Back</h2>
+      <div className='date-input-area'>
+      <input type='date' className='date-input'/>
+      <input type='date' className='date-input'/>
+      </div>
+     
+ </div>
+      
       <div class="cards">
         <div class="card">
-          <p>Total Posts</p>
+        <PiArticleNyTimesDuotone className='card-icon' />
           <div className='card-lower-section'>
             <h3>40</h3>
-            <PiArticleNyTimesDuotone className='card-icon' />
+            <p>Total Posts</p>
           </div>
         </div>
         <div class="card0">
-          <p>Total Users</p>
+        <FaUsers className='card-icon' />
+        
           <div className='card-lower-section'>
             <h3>50</h3>
-            <FaUsers className='card-icon' />
+            <p>Total Users</p>
           </div>
         </div>
         <div class="card2">
-          <p>Today</p>
+        <IoIosEye className='card-icon' />
+        
           <div className='card-lower-section'>
             <h3>40000</h3>
-            <IoIosEye className='card-icon' />
+            <p>Today</p>
           </div>
         </div>
         <div class="card3">
-          <p>Yesterday</p>
+        <IoIosEye className='card-icon' />
+          
           <div className='card-lower-section'>
             <h3>1040</h3>
-            <IoIosEye className='card-icon' />
+            <p>Yesterday</p>
           </div>
         </div>
         <div class="card4">
-          <p>This Month</p>
+        <IoIosEye className='card-icon' />
+         
           <div className='card-lower-section'>
             <h3>9848030</h3>
-            <IoIosEye className='card-icon' />
+            <p>This Month</p>
           </div>
         </div>
         <div class="card5">
-          <p>Last Month</p>
+        <IoIosEye className='card-icon' />
+        
           <div className='card-lower-section'>
             <h3>438947</h3>
-            <IoIosEye className='card-icon' />
+            <p>Last Month</p>
           </div>
         </div>
         <div class="card6">
-          <p>All Time</p>
+        <IoIosEye className='card-icon' />
           <div className='card-lower-section'>
-            <h3>136891370</h3>
-            <IoIosEye className='card-icon' />
+            <h3>13689137</h3>
+            <p>All Time</p>
+         
           </div>
         </div>
 
 
       </div>
-      <h3 className='Visitors-heading'>Visitors</h3>
-
+      
       <div className='charts-areas'>
         <div className='left-chart'>
           <Chart />

@@ -23,7 +23,7 @@ const Posts = () => {
       img: "https://images.unsplash.com/photo-1518770660439-4636190af475",
       title: "The Future of AI in Tech",
       created_date: "2024-08-20",
-      description: "Exploring how artificial intelligence is shaping the future of technology and its impact on various industries.",
+      description: "Exploring how artificial intelligence how artificial intelligence i how artificial intelligence i how artificial intelligence i how artificial intelligence i how artificial intelligence i is shaping the future of technology and its impact on various industries.",
       category: "Tech"
     },
     {
@@ -94,6 +94,13 @@ const Posts = () => {
       id: 10,
       img: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba",
       title: "The Evolution of Music Streaming in 2024",
+      created_date: "2024-08-11",
+      description: "How music streaming platforms have evolved and what's new in 2024.",
+      category: "Entertainment"
+    },    {
+      id: 11,
+      img:"https://images.unsplash.com/photo-1522075469751-3a6694fb2f61",
+      title: "This is testing list",
       created_date: "2024-08-11",
       description: "How music streaming platforms have evolved and what's new in 2024.",
       category: "Entertainment"

@@ -7,13 +7,31 @@
     border-radius: 8px;
 }
 .menu-list-item-edit{
-    width: 20%;
-    text-align: right;
+    width: 15%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+
 
 }
 .menu-list-item-mid{
-    width: 80%;
+    width: 85%;
+
+    display: flex;
+ 
     
+}
+.menu-list-item-mid img{
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    margin-right: 10px;
+    border-radius: 50%;
+    
+}
+.menu-list-item-mid h4{
+font-size: 16px;
 }
 @media screen and (max-width: 1080px) {
 
