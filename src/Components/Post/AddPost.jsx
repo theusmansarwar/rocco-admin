@@ -3,13 +3,13 @@ import { useLocation,useNavigate } from 'react-router-dom';
 import JoditEditor from 'jodit-react';
 import './Addpost.css';
 import { IoMdCloseCircle } from "react-icons/io";
-
+import { MdOutlineCloudUpload } from "react-icons/md";
 const AddPost = ({ placeholder, handleHideAddPost }) => {
   
   const navigate = useNavigate();
   const location = useLocation();
   const post = location.state?.post;
-  const dummyimg = '../dummy.png';
+  const dummyimg = '../image.png';
   const fileInputRef = useRef(null);
   const editor = useRef(null);
   const [title, setTitle] = useState(post?.title || '');
@@ -89,18 +89,7 @@ const AddPost = ({ placeholder, handleHideAddPost }) => {
     <div className='AddPost'>
       <h3>Create New Post</h3>
       <div className='upper-input-area'>
-        <input type='text' placeholder='Add title' value={title} />
-        <input type='text' placeholder='Add heading' value={heading}/>
-        <select id="dropdown" value={selectedOption} onChange={handleChange}>
-          <option value="">Select a category</option>
-          {options.map((option, index) => (
-            <option key={index} value={option}>
-              {option}
-            </option>
-          ))}
-        </select>
-        <p>Select Thumbnail Image</p>
-        <div className='image-container'>
+        <div className='image-container'  >
           <label htmlFor="file-upload" style={{ cursor: 'pointer' }}>
             <img
               src={image}
@@ -123,6 +112,17 @@ const AddPost = ({ placeholder, handleHideAddPost }) => {
             onChange={handleFileChange}
           />
         </div>
+        <input type='text' placeholder='Add title' value={title} />
+        <input type='text' placeholder='Add heading' value={heading}/>
+        <select id="dropdown" value={selectedOption} onChange={handleChange}>
+          <option value="">Select a category</option>
+          {options.map((option, index) => (
+            <option key={index} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
+      
       </div>
 
       <JoditEditor

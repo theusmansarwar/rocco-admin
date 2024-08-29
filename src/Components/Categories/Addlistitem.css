@@ -1,9 +1,16 @@
-.add-list-item{
+.addlist{
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+    display: flex;
+    }
+    .add-list-item{
     
-    width: 350px;
+    width: 80%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     padding: 20px;
+    background-color: white;
 
 }
 .add-list-item h3{
@@ -11,78 +18,110 @@
 
 }
 .add-list-item input{
-    width: 96%;
-    margin-top: 20px;
+    width: 97%;
+    margin-top: 10px;
     padding: 5px;
 }
-.add-list-item select{
-    width: 100%;
+.add-list-item .switch-div{
+    width: 97%;
     margin-top: 20px;
     padding: 5px;
+   justify-content: space-between;
+   display: flex;
 }
-.addlist{
-justify-content: center;
-align-items: center;
-margin-top: 80px;
-display: flex;
-}
+
 .add-button{
     background-color: rgb(0, 0, 0);
     border: none;
     color: white;
     padding: 10px;
-    border-radius: 16px;
-    width: 100%;
+    border-radius: 10px;
+    width: fit-content;
     margin-top: 20px;
     margin-bottom: 10px;
     font-size: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+.btn-section{
+    display: flex;
+    justify-content: space-between;
+}
 .cancel-button{
-    background-color: rgb(141, 141, 141);
-    border: none;
-    color: white;
+    background-color: rgba(214, 214, 214, 0);
+
+    color: black;
     padding: 10px;
-    border-radius: 16px;
-    width: 100%;
+    border-radius: 10px;
+    border: 1px solid black;
+   
+    width: fit-content;
+    margin-top: 20px;
+    margin-bottom: 10px;
     font-size: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
 }
-.image-container2 {
+.switch-div p{
+ 
+   width: 50%;
+
+
+}
+.switch-div .switch {
     position: relative;
     display: inline-block;
-    width: 100%;
-    height: 100px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-
-}
-
-.image-container2 img {
-    width: 200px;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-    align-items: center;
-    border: 1px solid black;
-    background-color: aliceblue;
-}
-.image-container2 .remove-icon 
-    {
+    width: 42px;
+    height: 16px;
+  }
+  
+  .switch-div .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .switch-div .switch input:checked + .slider {
+    background-color: #00f429;
+  }
+  
+  .switch-div .switchinput:focus + .slider {
+    box-shadow: 0 0 1px #00f429;
+  }
+  
+  .switch-div .switch input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  .slider {
     position: absolute;
-    top: -15px;
-    right: 88px ;
-    z-index: 2;
-    color: red;
     cursor: pointer;
-    font-size: 1.5rem;
-}
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 17px;
+    width: 17px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+.slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
 
 @media screen and (max-width: 1080px) {
 .image-container2 .remove-icon 

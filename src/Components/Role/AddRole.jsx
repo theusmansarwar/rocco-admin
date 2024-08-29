@@ -1,13 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react';
-import './Addlistitem.css';
+import React, { useState, useEffect,useRef } from 'react';
 import { IoMdCloseCircle } from "react-icons/io";
-const AddlistItem = ({ handleHideAddPost, onAddCategory, editData }) => {
+const AddRole = ({ handleHideAddPost, onAddCategory, editData }) => {
   const [category, setCategory] = useState('');
   const [isEdit, setIsEdit] = useState(false);
   const [showDeleteIcon, setShowDeleteIcon] = useState();
-  const dummyimg = '../image.png';
+  const dummyimg = '../dummy.png';
   const fileInputRef = useRef(null);
-  const [image, setImage] = useState(dummyimg);
+  const [image, setImage] = useState( dummyimg);
   useEffect(() => {
     if (editData) {
       setCategory(editData.category);
@@ -28,14 +27,14 @@ const AddlistItem = ({ handleHideAddPost, onAddCategory, editData }) => {
       setCategory('');
     }
   };
-
+  
   const handleImageClick = () => {
     fileInputRef.current.click();
   };
 
   const handleDeleteClick = () => {
     setImage(dummyimg);
-    setShowDeleteIcon(false);
+    setShowDeleteIcon(false); 
   };
   const handleFileChange = (event) => {
     const file = event.target.files[0];
@@ -47,7 +46,7 @@ const AddlistItem = ({ handleHideAddPost, onAddCategory, editData }) => {
         setShowDeleteIcon(true);
       };
       reader.onerror = (error) => {
-        console.error("Error reading file:", error);
+        console.error("Error reading file:", error); 
       };
       reader.readAsDataURL(file);
     }
@@ -57,54 +56,31 @@ const AddlistItem = ({ handleHideAddPost, onAddCategory, editData }) => {
   return (
     <div className='addlist'>
       <div className='add-list-item'>
-        <h3>{isEdit ? 'Edit Category' : 'Add New Category'}</h3>
-        <div className='image-container'  >
-          <label htmlFor="file-upload" style={{ cursor: 'pointer' }}>
-            <img
-              src={image}
-              alt="Thumbnail"
-              onClick={handleImageClick}
-            />
-            {showDeleteIcon && (
-              <IoMdCloseCircle
-                className='remove-icon'
-                onClick={handleDeleteClick}
-              />
-            )}
-          </label>
-          <input
-            id="file-upload"
-            type="file"
-            accept="image/*"
-            style={{ display: 'none' }}
-            ref={fileInputRef}
-            onChange={handleFileChange}
-          />
-        </div>
-        <input
-          type='text'
-          placeholder='Category Name'
-          className='input'
-          value={category}
+        <h3>{isEdit ? 'Edit Role' : 'Add New Role'}</h3>
+      
+        <input 
+          type='text' 
+          placeholder='Role Name' 
+          className='input' 
+          value={category} 
           onChange={handleInputChange}
         />
-        <div className='switch-div'>
+       <div className='switch-div'>
           <p>Visibility : enable / disable</p>
           <label class="switch">
             <input type="checkbox" />
             <span class="slider round"></span>
           </label>
         </div>
-<div className='btn-section'>
-<button className='cancel-button' onClick={handleHideAddPost}>Cancel</button>
+        <div className='btn-section'>
         <button className='add-button' onClick={handleSubmit}>
-          {isEdit ? 'Update Category' : '+ Add Category'}
+          {isEdit ? 'Update Role' : '+ Add Role'}
         </button>
-        
+        <button className='cancel-button' onClick={handleHideAddPost}>Cancel</button>
         </div>
       </div>
     </div>
   );
 };
 
-export default AddlistItem;
+export default AddRole;
